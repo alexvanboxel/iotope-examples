@@ -20,9 +20,9 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
         self.end_headers()
 
         resp = { "urn:iotope.app:iotope.org:notify" : 
-            {   "Caption" : "Message for Python" , 
-                "Message" : "I see a tag with ID "+tagId,
-                "Type" : "INFO"
+            {   "caption" : "Message for Python" , 
+                "message" : "I see a tag with ID "+tagId,
+                "type" : "INFO"
                  } }
         self.wfile.write(json.dumps(resp).encode("utf-8"))
 
